@@ -14,10 +14,14 @@ github, la idea de este era aprender a usar el lenguaje python.
 
 # Mejoras:	
 
-Agregar excepciones para cuando se introduce un valor no valido			        
-Añadir mas opciones predeterminadas							                      			
-Posibilidad de añardir prefijos y sufijos en la opcion Personalizada        
-Crear una interfaz grafica para la comodidad del usuario		            		
+Agregar excepciones para cuando se introduce un valor no valido
+
+Añadir mas opciones predeterminadas
+
+Posibilidad de añardir prefijos y sufijos en la opcion Personalizada
+
+Crear una interfaz grafica para la comodidad del usuario
+
 hacer el codigo mas "pythonic"										                        	
 
 
