@@ -6,8 +6,8 @@
 # Descripcion: 		
 
 Este programa esta diseñado para Kali Linux.                      	        
-Puedes realizar distintos tipos de pines o contraseñas para usar con    		
-una gran cantidad de programas incluidos en esta suite.                     
+Puedes generar distintos tipos de pines o contraseñas para usar con    		
+una gran cantidad de programas incluidos en Kali Linux, como por ejemplo en *Brutus*.                     
 
 Este programa tiene 2 años desde la fecha de publicacion del mismo en       
 github, la idea de este era aprender a usar el lenguaje python.	           	
