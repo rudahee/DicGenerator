@@ -1,18 +1,26 @@
+#!/usr/bin/env python
+
 import itertools
 import os
-												
-def dicGen():									# Imprime el mensaje de carga en consola
+import sys
+
+OS = sys.platform								# Detecta el Sistema operativo
+									
+def dicGen():									# Imprime el mensaje en pantalla
 	print("""
 ··········································			
 #  SU DICCIONARIO SE ESTA GENERANDO...   #
 ··········································""")
-def dicFin():									# Imprime el mensaje de finalizacion en consola
-	os.system("cls")
+def dicFin():									# Imprime el mensaje en pantalla
+	if OS != 'Linux2':
+		os.system("cls")
+	else:
+		os.system("clear")
 	print("""
 #==============================#
 # Su diccionario ha finalizado #
 #==============================#""")			
-def generacion(longitud, caracteres, nombre_txt='Diccionario.txt'):		# Generamos el diccionario y lo escribimos
+def generacion(longitud, caracteres, nombre_txt='Diccionario'):		# Generamos el diccionario y lo escribimos
 	txt = open(nombre_txt, 'w')                                			# Creamos un archivo con permisos de escritura
 	for t in itertools.product(list(caracteres), repeat=longitud):  	# Bucle que genera la lista
 		if opcion == 4:
@@ -20,7 +28,10 @@ def generacion(longitud, caracteres, nombre_txt='Diccionario.txt'):		# Generamos
 		else:
 			txt.write(''.join(str(x) for x in t) + '\n')  				# Escribe la lista generada
 
-os.system("cls")														# Imprime la consola el menu de bienvenida de bienvenida
+	if OS != 'Linux2':
+		os.system("cls")
+	else:
+		os.system("clear")														# Imprime la pantalla de bienvenida
 opcion = int(input("""
 	################################
 	## GENERADOR DE DICCIONARIOS  ##
@@ -38,7 +49,10 @@ opcion = int(input("""
 
 OPCION > """))
 
-os.system("cls")
+if OS != 'Linux2':
+	os.system("cls")
+else:
+	os.system("clear")
 if opcion == 1:																	# Opcion predefinida 1 - PIN/Passcode
 	dicGen()
 	generacion(4, '0123456789')
@@ -59,7 +73,10 @@ elif opcion == 5:																# Opcion Personalizada - Aqui el orden de llama
 	l = int(input("Longitud de la clave \n> "))									# ya que primero debemos hacer las preguntas al usuario.
 	c = input("\nCaracteres componen la clave \n> ")		
 	n = input("\nNombre del fichero de salida (sin extension) \n> ") + ".txt"	# Agregamos el *.txt al nombre elegido por el usuario
-	os.system("cls")
+	if OS != 'Linux2':
+		os.system("cls")
+	else:
+		os.system("clear")
 	dicGen()
 	generacion(l, c, n)															# Pasamos 3 argumentos en vez de 2 por que hemos definido un nombre de archivo
 	dicFin()																	# y no usaremos el nombre de "Diccionario.txt" que es el predefinido la en funcion
