@@ -12,10 +12,10 @@ def dicGen():									# Imprime el mensaje en pantalla
 #  SU DICCIONARIO SE ESTA GENERANDO...   #
 ··········································""")
 def dicFin():									# Imprime el mensaje en pantalla
-	if OS != 'Linux2':
-		os.system("cls")
-	else:
+	if OS != 'linux2':
 		os.system("clear")
+	else:
+		os.system("cls")
 	print("""
 #==============================#
 # Su diccionario ha finalizado #
@@ -28,10 +28,10 @@ def generacion(longitud, caracteres, nombre_txt='Diccionario'):		# Generamos el 
 		else:
 			txt.write(''.join(str(x) for x in t) + '\n')  				# Escribe la lista generada
 
-	if OS != 'Linux2':
-		os.system("cls")
+	if OS != 'linux2':
+		os.system("clear")
 	else:
-		os.system("clear")														# Imprime la pantalla de bienvenida
+		os.system("cls")														# Imprime la pantalla de bienvenida
 opcion = int(input("""
 	################################
 	## GENERADOR DE DICCIONARIOS  ##
@@ -49,10 +49,10 @@ opcion = int(input("""
 
 OPCION > """))
 
-if OS != 'Linux2':
-	os.system("cls")
-else:
+if OS != 'linux2':
 	os.system("clear")
+else:
+	os.system("cls")
 if opcion == 1:																	# Opcion predefinida 1 - PIN/Passcode
 	dicGen()
 	generacion(4, '0123456789')
@@ -73,10 +73,10 @@ elif opcion == 5:																# Opcion Personalizada - Aqui el orden de llama
 	l = int(input("Longitud de la clave \n> "))									# ya que primero debemos hacer las preguntas al usuario.
 	c = input("\nCaracteres componen la clave \n> ")		
 	n = input("\nNombre del fichero de salida (sin extension) \n> ") + ".txt"	# Agregamos el *.txt al nombre elegido por el usuario
-	if OS != 'Linux2':
-		os.system("cls")
-	else:
+	if OS != 'linux2':
 		os.system("clear")
+	else:
+		os.system("cls")
 	dicGen()
 	generacion(l, c, n)															# Pasamos 3 argumentos en vez de 2 por que hemos definido un nombre de archivo
 	dicFin()																	# y no usaremos el nombre de "Diccionario.txt" que es el predefinido la en funcion
