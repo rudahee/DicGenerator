@@ -41,4 +41,5 @@ You can generate different types of pins or passwords to use with a large number
 ###
 
 *Podeis usar y editar este programa como querais.*
+
 *Feel free to use and edit the code!*
