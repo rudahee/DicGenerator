@@ -11,7 +11,7 @@ Puedes generar distintos tipos de pines o contraseñas para usar con una gran ca
 ------
 This program is designed for Kali Linux.
 
-You can generate different types of pins or passwords to use with a large number of programs included in Kali Linux, such as * Brutus *.
+You can generate different types of pins or passwords to use with a large number of programs included in Kali Linux, such as *Brutus*.
 
 **This program has 2 years from the date of its publication on github, the idea of this was to learn to use the python language**
 
